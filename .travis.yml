@@ -56,7 +56,7 @@ matrix:
           - arm64
           - amd64
      python: 3.6
-      env:
+     env:
         - TEST_DEPS=traittypes[test]
         - TEST="nosetests traittypes"
    
