@@ -1,3 +1,6 @@
+arch: 
+     - arm64
+     - amd64
 language: python
 python:
   - "nightly"
@@ -38,6 +41,31 @@ matrix:
         - TEST_DEPS=ipywidgets[test]
         - TEST="pytest --pyargs ipywidgets"
     - python: 3.6
+      env:
+        - TEST_DEPS=traittypes[test]
+        - TEST="nosetests traittypes"
+    - arch: arm64
+      python: 3.6
+      env:
+        - TEST_DEPS=ipython[test]
+        - TEST=iptest
+    - arch: arm64
+      python: 3.6
+      env:
+        - TEST_DEPS=git+https://github.com/jupyter/nbconvert.git#egg=nbconvert[test]
+        - TEST="py.test --pyargs nbconvert"
+    - arch: arm64
+      python: 3.6
+      env:
+        - TEST_DEPS=notebook[test]
+        - TEST="nosetests --exclude selenium notebook"
+    - arch: arm64
+      python: 3.6
+      env:
+        - TEST_DEPS=ipywidgets[test]
+        - TEST="pytest --pyargs ipywidgets"
+    - arch: arm64
+      python: 3.6
       env:
         - TEST_DEPS=traittypes[test]
         - TEST="nosetests traittypes"
