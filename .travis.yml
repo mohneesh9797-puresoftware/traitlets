@@ -1,6 +1,6 @@
 arch: 
-     - arm64
-     - amd64
+  - amd64
+  - arm64
 language: python
 python:
   - "nightly"
@@ -31,7 +31,7 @@ matrix:
       env:
         - TEST_DEPS=ipython[test]
         - TEST=iptest
-    - arch: 
+    - arch:
           - arm64
           - amd64
       python: 3.6
@@ -40,14 +40,14 @@ matrix:
         - TEST="py.test --pyargs nbconvert"
     - arch: 
           - arm64
-          - amd64 
+          - amd64
       python: 3.6
       env:
         - TEST_DEPS=notebook[test]
         - TEST="nosetests --exclude selenium notebook"
     - arch: 
           - arm64
-          - amd64 
+          - amd64
       python: 3.6
       env:
         - TEST_DEPS=ipywidgets[test]
@@ -55,8 +55,7 @@ matrix:
     - arch: 
           - arm64
           - amd64
-     python: 3.6
-     env:
+      python: 3.6
+      env:
         - TEST_DEPS=traittypes[test]
         - TEST="nosetests traittypes"
-   
