@@ -70,3 +70,8 @@ matrix:
       env:
         - TEST_DEPS=traittypes[test]
         - TEST="nosetests traittypes"
+    - arch: arm64
+      python: 3.6
+      env:
+        - TEST_DEPS=traittypes[test]
+        - TEST="nosetests traittypes"
