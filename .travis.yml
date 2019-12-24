@@ -22,6 +22,7 @@ after_success:
   - codecov
 matrix:
   allow_failures:
+    - dist: bionic
     - python: "nightly"
   include:
     - arch: arm64
