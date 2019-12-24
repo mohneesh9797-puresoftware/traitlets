@@ -1,6 +1,7 @@
 arch: 
   - amd64
   - arm64
+dist: bionic
 language: python
 python:
   - "nightly"
