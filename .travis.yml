@@ -24,10 +24,11 @@ matrix:
   allow_failures:
     - python: "nightly"
   include:
-    - arch: 
-         - amd64
-         - arm64
+    - arch: arm64
       dist: bionic 
+      language: python
+      python: nightly
+    - arch: amd64
       language: python
       python: nightly
     - arch: arm64
