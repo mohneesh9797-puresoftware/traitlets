@@ -1,14 +1,18 @@
 arch: 
   - amd64
   - arm64
-dist: bionic
 language: python
 python:
-  - "nightly"
   - 3.6
   - 3.5
   - 3.4
   - 2.7
+arch: 
+  - amd64
+  - arm64
+language: python
+python:
+  - "nightly"
 sudo: false
 install:
   - pip install --upgrade pip
