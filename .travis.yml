@@ -7,12 +7,7 @@ python:
   - 3.5
   - 3.4
   - 2.7
-arch: 
-  - amd64
-  - arm64
-language: python
-python:
-  - "nightly"
+
 sudo: false
 install:
   - pip install --upgrade pip
@@ -27,9 +22,14 @@ after_success:
   - codecov
 matrix:
   allow_failures:
-    - dist: bionic
     - python: "nightly"
   include:
+    - arch: 
+         - amd64
+         - arm64
+      dist: bionic 
+      language: python
+      python: nightly
     - arch: arm64
       python: 3.6
       env:
